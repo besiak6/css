@@ -1,0 +1,193 @@
+ .wnd-heal {
+            position: fixed;
+            top: 200px;
+            left: 10px;
+            width: 280px;
+            max-height: 380px;
+            color: #F5F5DC;
+            border: 2px solid #555;
+            border-radius: 6px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            cursor: url("../img/gui/cursor/1n.png") 4 0, auto;
+            user-select: none;
+        }
+
+        .background-wnd {
+            position: absolute;
+            inset: 0;
+            background: rgba(30, 30, 30, 0.85);
+            border-radius: 6px;
+            z-index: 0;
+        }
+
+        .header-heal {
+            position: relative;
+            z-index: 1;
+            padding: 4px 12px;
+            cursor: move;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            height: 20px;
+            color: #F5F5DC;
+            background: transparent;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+        }
+
+        .heal-text {
+            font-family: Arial, sans-serif;
+            pointer-events: auto;
+            text-shadow: 1px 1px 1px #000;
+            margin: 0;
+            padding: 0;
+            color: #F5F5DC;
+            line-height: 26px;
+            text-align: center;
+            font-size: 11px;
+            background: none;
+            user-select: none;
+            flex-grow: 1; /* żeby tekst zajął miejsce między przyciskami */
+        }
+.heal-close-button {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border: none;
+  background: url("../img/gui/buttony.png?v=1746509712602") -624px -117px;
+  cursor: url("../img/gui/cursor/5n.png?v=1746509712602") 4 0, url("../img/gui/cursor/5n.cur?v=1746509712602") 4 0, auto;
+}
+.heal-close-button:hover {
+  background-position: -726px -117px;
+}
+        .content-heal {
+            position: relative;
+            z-index: 1;
+            padding: 10px 12px;
+            font-size: 13px;
+            color: #DDD;
+            overflow-y: auto;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .status-row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 6px;
+        }
+
+        .checkbox {
+            position: relative;
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        .checkbox input[type="checkbox"] {
+            opacity: 0;
+            width: 15px;
+            height: 15px;
+            margin: 0;
+            position: absolute;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .checkbox label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #545454;
+            background: #545454;
+            box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5) inset;
+            cursor: pointer;
+        }
+
+        .checkbox input[type="checkbox"]:checked + label::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 0;
+            left: 0;
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%230dff00' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: all 0.2s ease;
+        }
+
+        .label-inline {
+            font-size: 12px;
+            font-family: Arial, sans-serif;
+            pointer-events: auto;
+            text-shadow: 1px 1px 1px #000;
+            color: #F5F5DC;
+            line-height: 15px;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .status-row .label-right {
+            margin-left: auto;
+        }
+
+        input[type="number"].input-heal {
+            font-size: 12px;
+            border: 1px solid #666;
+            border-radius: 4px;
+            background-color: #222;
+            color: #ddd;
+            width: 50px;
+            text-align: center;
+            height: 15px;
+            margin-left: 6px;
+            flex-shrink: 0;
+            -moz-appearance: textfield;
+        }
+
+        input[type="number"].input-heal::-webkit-inner-spin-button,
+        input[type="number"].input-heal::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .checkbox-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        select.select-heal {
+            font-size: 13px;
+            padding: 4px 6px;
+            border: 1px solid #666;
+            border-radius: 4px;
+            background-color: #222;
+            color: #ddd;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="text"].input-heal {
+            font-size: 13px;
+            padding: 4px 6px;
+            border: 1px solid #666;
+            border-radius: 4px;
+            background-color: #222;
+            color: #ddd;
+            width: 100%;
+            box-sizing: border-box;
+        }
