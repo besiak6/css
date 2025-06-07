@@ -1,0 +1,261 @@
+        .wnd-baddonz {
+            position: fixed;
+            top: ${windowPosition.y}px;
+            left: ${windowPosition.x}px;
+            width: 90px;
+            max-height: 420px;
+            background: rgba(30, 30, 30, 0.8);
+            color: #fff;
+            border: 2px solid #555;
+            border-radius: 6px;
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            cursor: url("../img/gui/cursor/1n.png") 4 0, auto;
+        }
+        .header-baddonz {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 6px 10px;
+            font-size: 13px;
+            text-align: left;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            user-select: none;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        .header-baddonz.centered {
+            text-align: center;
+        }
+        .collapse-btn {
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            font-size: 13px;
+            color: #aaa;
+        }
+        .collapse-btn:hover {
+            color: #fff;
+        }
+        .slider-baddonz {
+            overflow-y: auto;
+            flex: 1;
+            padding: 0 10px 4px;
+            scrollbar-width: thin;
+            scrollbar-color: #444 #1a1a1a;
+            margin-top: 0;
+        }
+        .slider-baddonz::-webkit-scrollbar {
+            width: 6px;
+        }
+        .slider-baddonz::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        .slider-baddonz::-webkit-scrollbar-thumb {
+            background-color: #444;
+            border-radius: 3px;
+        }
+        .add-baddonz {
+            background: rgba(42, 42, 42, 0.8);
+            border: 1px solid #444;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            padding: 8px 10px;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.2s ease;
+        }
+        .add-baddonz:hover {
+            background: rgba(55, 55, 55, 0.85);
+        }
+        .add-baddonz .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .add-baddonz .left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .add-baddonz .addon-name {
+            font-size: 12px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            pointer-events: auto;
+            text-shadow: 1px 1px 1px #000;
+            margin: 0;
+            padding: 0;
+            color: #F5F5DC;
+            line-height: 24px;
+            text-align: left;
+            background: none;
+            user-select: none;
+        }
+        .add-baddonz .addon-desc {
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            pointer-events: auto;
+            text-shadow: 1px 1px 1px #000;
+            margin: 0;
+            padding: 0;
+            color: #F5F5DC;
+            line-height: 14px;
+            text-align: left;
+            background: none;
+            user-select: none;
+            margin-top: 4px;
+        }
+       .baddonz-checkbox {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.baddonz-checkbox input[type="checkbox"] {
+    opacity: 0;
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.baddonz-checkbox label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.baddonz-checkbox input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #545454;
+    background: #545454;
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.5) inset;
+}
+
+.baddonz-checkbox input[type="checkbox"]:checked + label::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%230dff00' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease;
+}
+        .baddonz-text {
+            font-family: Arial, sans-serif;
+            pointer-events: auto;
+            text-shadow: 1px 1px 1px #000;
+            margin: 0;
+            padding: 0;
+            color: #F5F5DC;
+            line-height: 28px;
+            text-align: left;
+            font-size: 11px;
+            background: none;
+            user-select: none;
+            margin-left: 8px;
+        }
+        .baddonz-collapse {
+            position: absolute;
+            right: 10px;
+            top: 6px;
+            width: 16px;
+            height: 14px;
+            background: url("../img/gui/buttony.png") -556px -399px;
+        }
+        .baddonz-collapse:hover {
+            filter: brightness(1.2);
+        }
+        .enhance__progress--current {
+    background: linear-gradient(90deg, #00c6ff, #0072ff, #8e2de2) !important;
+}
+.baddonz-tip-wrapper {
+    position: absolute;
+    z-index: 1001;
+    box-shadow:
+        0 0 0 0 #2b282a,
+        0 0 0 1px #353131,
+        0 0 0 2px #191311,
+        0 0 0 3px #2b2727,
+        0 0 0 4px #59595a,
+        0 0 0 5px #9da1a7,
+        0 0 0 6px #5a585b,
+        0 0 0 7px #2c2625;
+    min-width: 150px;
+    max-width: 250px;
+    color: #e6d6bf;
+    line-height: 14px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.baddonz-tip-wrapper.visible {
+    opacity: 1;
+}
+
+.baddonz-tip-wrapper .content {
+    background: rgba(15, 15, 15, 0.85);
+    padding: 5px;
+    font-family: 'Rubik', sans-serif !important;
+    font-size: 12.8px;
+    word-break: break-word;
+}
+.settings-add-baddonz {
+    width: 13px;
+    height: 13px;
+    background: url("../img/gui/buttony.png") no-repeat -607px -117px;
+    margin-right: 4px;
+}
+
+.settings-add-baddonz:hover {
+    background-position: -659px -117px;
+}
+.left {
+  position: relative;
+}
+
+.settings-add-baddonz {
+  position: absolute;
+  left: 212px;
+}
+///cursor
+.add-baddonz .addon-name,
+.add-baddonz .addon-desc {
+  cursor: url("../img/gui/cursor/1n.png") 4 0, auto;
+}
+.add-baddonz input[type="checkbox"],
+.add-baddonz label[for^="checkbox"],
+.baddonz-checkbox {
+  cursor: url("../img/gui/cursor/5n.png") 4 0, pointer;
+}
+.add-baddonz button,
+.add-baddonz .settings-add-baddonz {
+  cursor: url("../img/gui/cursor/5n.png") 4 0, pointer;
+}
+
+.add-baddonz a {
+  cursor: url("../img/gui/cursor/5n.png") 4 0, pointer;
+}
+
+.add-baddonz *:not(input):not(label):not(button):not(a) {
+  cursor: url("../img/gui/cursor/1n.png") 4 0, auto;
+}
